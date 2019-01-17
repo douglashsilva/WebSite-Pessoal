@@ -1,0 +1,428 @@
+@charset "UTF-8";
+ @import url("https://fonts.googleapis.com/css?family=Fira+Sans:400,500,500i,600,600i,700,700i,800,800i,900,900i");
+ html, body {
+     scroll-behavior: smooth !important;
+}
+ * {
+     scroll-behavior: smooth;
+     margin: 0;
+    padding: 0;
+    font-family: "Fira Sans", Helvetica, sans-serif !important;
+    -webkit-touch-callout: none !important;
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+}
+::-webkit-scrollbar {
+    width: 7px;
+    border: none;
+}
+::-webkit-scrollbar-thumb {
+    background: #0F3C90;
+    border: none;
+}
+div.left {
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    background-color: #0F3C90;
+    -webkit-box-shadow: inset 0 0 50px #002872;
+    box-shadow: inset 0 0 50px #002872;
+}
+div.left > div.me-container {
+    position: relative;
+    width: 400px;
+    height: 450px;
+    left: 50%;
+    top: 50%;
+    margin-left: -200px;
+    margin-top: -300px;
+}
+div.me-container > div.me {
+    position: absolute;
+    left: 50%;
+    margin-left: -100px;
+    background-image: url("../img/@douglashsilva.jpg");
+    background-repeat: no-repeat;
+    background-size: 200px 250px;
+    width: 200px;
+    height: 250px;
+    border-radius: 15px;
+    -webkit-box-shadow: 0 0 100px 10px #002262;
+    box-shadow: 0 0 100px 10px #002262;
+}
+div.me-container > div.me::after {
+    position: absolute;
+    white-space: nowrap;
+    content: "Douglas Henrique";
+    font-size: 3em;
+    font-weight: 700;
+    color: #FBFBFB;
+    left: 50%;
+    top: 110%;
+    -webkit-transform: translate(-50%);
+    -ms-transform: translate(-50%);
+    transform: translate(-50%);
+    text-shadow: 10px 10px 20px #002262;
+}
+div.me-container > div.me::before {
+    position: absolute;
+    white-space: nowrap;
+    content: "Programador Web Full-Stack";
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #FBFBFB;
+    left: 50%;
+    top: 134%;
+    -webkit-transform: translate(-50%);
+    -ms-transform: translate(-50%);
+    transform: translate(-50%);
+    text-shadow: 10px 10px 20px #002262;
+}
+div.me-container > div.me > div.social {
+    position: absolute;
+    width: 200px;
+    height: 60px;
+    left: 50%;
+    top: 155%;
+    -webkit-transform: translate(-50%);
+    -ms-transform: translate(-50%);
+    transform: translate(-50%);
+}
+div.right {
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    left: 40%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: #FFFFFF;
+    -webkit-box-shadow: inset 0 0 50px #BEBEBE;
+    box-shadow: inset 0 0 50px #BEBEBE;
+}
+div.right > div.right-container {
+    position: absolute;
+    width: 95%;
+    top: 2.5%;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+    -ms-transform: translate(-50%);
+    transform: translate(-50%);
+}
+div.right > div.right-container input[type=radio]{
+    display: none !important;
+}
+div.right > div.right-container label {
+    color: #0F3C90;
+    font-size: 25px;
+    font-weight: 700;
+    padding-right: 10px;
+    text-shadow: 2px 2px 1px rgba(0,0,0,0.1);
+}
+div.right > div.right-container > div.tabs > div.tab-content {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: none;
+    margin-top: 3em;
+    clear: both;
+}
+div.right > div.right-container > div.tabs {
+    position: relative;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+}
+div.right > div.right-container > div.tabs > label[for=tab-me], div.right > div.right-container > div.tabs > label[for=tab-certificates] {
+    cursor: pointer;
+}
+div.right > div.right-container > div.tabs > label[for=tab-me]:hover::after, div.right > div.right-container > div.tabs > label[for=tab-certificates]:hover::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #0F3C90;
+    border-radius: 10px;
+    white-space: nowrap !important;
+}
+div.right > div.right-container > div.tabs > input#tab-me:checked ~ div#tab-content-me, div.right > div.right-container > div.tabs > input#tab-certificates:checked ~ div#tab-content-certificates {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+    -ms-flex-direction: column !important;
+    flex-direction: column !important;
+}
+div.right > div.right-container > div.tabs > input#tab-me:checked + label[for=tab-me]::after, div.right > div.right-container > div.tabs > input#tab-certificates:checked + label[for=tab-certificates]::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #0F3C90;
+    border-radius: 10px;
+}
+div.right > div.right-container div.about {
+    font-size: 1.2em;
+    font-weight: 500;
+    padding-right: 10px;
+    text-shadow: 2px 2px 1px rgba(0,0,0,0.08);
+    color: #1D1D1D;
+}
+div.right > div.right-container div.skills, div.right > div.right-container div.experiences, div.right > div.right-container div.courses {
+    margin-top: 1em;
+    font-size: 1.2em;
+    font-weight: 500;
+    text-shadow: 2px 2px 1px rgba(0,0,0,0.08);
+    color: #1D1D1D;
+}
+div.right > div.right-container div.skills::before {
+    content: "Habilidades";
+    color: #0F3C90;
+    font-size: 25px;
+    font-weight: 700;
+}
+div.right > div.right-container div.experiences::before {
+    content: "Experiências";
+    color: #0F3C90;
+    font-size: 25px;
+    font-weight: 700;
+}
+div.right > div.right-container div.courses::before {
+    content: "Cursos";
+    color: #0F3C90;
+    font-size: 25px;
+    font-weight: 700;
+}
+div.right > div.right-container div.skills > div.skill, div.right > div.right-container div.experiences > div.experience, div.right > div.right-container div.courses > div.course {
+    margin-top: 1em;
+}
+div.right > div.right-container div.courses > div.course {
+    margin-bottom: 1em;
+}
+
+div.right > div.right-container div.skills > div.skill > div.languages,
+div.right > div.right-container div.skills > div.skill > div.frameworks,
+div.right > div.right-container div.experiences > div.experience > div.title,
+div.right > div.right-container div.experiences > div.experience > div.company,
+div.right > div.right-container div.experiences > div.experience > div.time,
+div.right > div.right-container div.courses > div.course > div.title,
+div.right > div.right-container div.courses > div.course > div.organization {
+	padding-left: 25px;
+	padding-top: 5px;
+}
+
+div.right > div.right-container div.skills > div.skill > div.title {
+    font-weight: 700;
+    color: #0F3C90;
+    font-size: 21px;
+}
+div.right > div.right-container div.skills > div.skill > div.languages::before {
+    content: "Linguagens: ";
+    color: #0F3C90;
+    font-size: 19px;
+    font-weight: 700;
+}
+div.right > div.right-container div.skills > div.skill > div.frameworks::before {
+    content: "Frameworks: ";
+    color: #0F3C90;
+    font-size: 19px;
+    font-weight: 700;
+}
+div.right > div.right-container div.experiences > div.experience > div.title::before {
+    content: "Cargo: ";
+    color: #0F3C90;
+    font-size: 19px;
+    font-weight: 700;
+}
+div.right > div.right-container div.experiences > div.experience > div.company::before {
+    content: "Empresa: ";
+    color: #0F3C90;
+    font-size: 19px;
+    font-weight: 700;
+}
+div.right > div.right-container div.experiences > div.experience > div.time::before {
+    content: "Tempo: ";
+    color: #0F3C90;
+    font-size: 19px;
+    font-weight: 700;
+}
+div.right > div.right-container div.courses > div.course > div.title::before {
+    content: "Curso: ";
+    color: #0F3C90;
+    font-size: 19px;
+    font-weight: 700;
+}
+div.right > div.right-container div.courses > div.course > div.organization > a {
+    text-decoration: none;
+    color: #1D1D1D;
+}
+div.right > div.right-container div.courses > div.course > div.organization::before {
+    content: "Organização: ";
+    color: #0F3C90;
+    font-size: 19px;
+    font-weight: 700;
+}
+div.right > div.right-container div#tab-content-certificates > section {
+    max-width: 100%;
+    -webkit-column-count: 2;
+    column-count: 2;
+}
+div.right > div.right-container div#tab-content-certificates > section > div {
+    background: white;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 2px 6px rgba(50,50,90,.1);
+    box-shadow: 0 2px 6px rgba(50,50,90,.1);
+    -webkit-column-break-inside: avoid;
+    break-inside: avoid-column;
+    overflow: hidden;
+}
+div.right > div.right-container div#tab-content-certificates > section > div > p {
+    padding: 10px;
+    font-family: sans-serif;
+    color: #6B7C93;
+    font-size: .875em;
+    line-height: 1.4em;
+}
+div.right > div.right-container div#tab-content-certificates > section > div > img {
+    display: block;
+    max-width: 100%;
+}
+@media (max-height: 800px) {
+    div.left > div.me-container {
+        position: relative;
+        width: 400px;
+        height: 450px;
+        left: 50%;
+        top: 50%;
+        margin-left: -200px;
+        margin-top: -225px !important;
+    }
+}
+@media (max-width: 1023px) {
+    div.right > div.right-container div#tab-content-certificates > section {
+        max-width: 100%;
+        -webkit-column-count: 1;
+        column-count: 1;
+    }
+}
+@media (max-width: 600px) {
+    div.left {
+        position: absolute;
+        width: 100% !important;
+        height: 100% !important;
+        background-color: #0F3C90;
+        -webkit-box-shadow: inset 0 0 50px #002872;
+        box-shadow: inset 0 0 50px #002872;
+    }
+    div.left > div.me-container {
+        position: relative;
+        width: 297px !important;
+        height: 359px !important;
+        left: 50%;
+        top: 50%;
+        margin-left: -148.50px !important;
+        margin-top: -179.50px !important;
+    }
+    div.me-container > div.me {
+        position: absolute;
+        left: 50%;
+        margin-left: -75px;
+        background-image: url("../img/@douglashsilva.jpg");
+        background-repeat: no-repeat;
+        background-size: 150px 187px;
+        width: 150px;
+        height: 187px;
+        border-radius: 15px;
+        -webkit-box-shadow: 0 0 100px 10px #002262;
+        box-shadow: 0 0 100px 10px #002262;
+    }
+    div.me-container > div.me::after {
+        position: absolute;
+        white-space: nowrap;
+        content: "Douglas Henrique";
+        font-size: 2em;
+        font-weight: 700;
+        color: #FBFBFB;
+        left: 50%;
+        top: 110%;
+        -webkit-transform: translate(-50%);
+        -ms-transform: translate(-50%);
+        transform: translate(-50%);
+        text-shadow: 10px 10px 20px #002262;
+    }
+    div.me-container > div.me::before {
+        position: absolute;
+        white-space: nowrap;
+        content: "Programador Web Full-Stack";
+        font-size: 1.4em;
+        font-weight: 700;
+        color: #FBFBFB;
+        left: 50%;
+        top: 132%;
+        -webkit-transform: translate(-50%);
+        -ms-transform: translate(-50%);
+        transform: translate(-50%);
+        text-shadow: 10px 10px 20px #002262;
+    }
+    div.me-container > div.me > div.social {
+        position: absolute;
+        width: 200px;
+        height: 60px;
+        left: 50%;
+        top: 165%;
+        -webkit-transform: translate(-50%);
+        -ms-transform: translate(-50%);
+        transform: translate(-50%);
+    }
+    div.right {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0 !important;
+        top: 100%;
+        background-color: #FFFFFF;
+        -webkit-box-shadow: inset 0 0 5px #BEBEBE !important;
+        box-shadow: inset 0 0 5px #BEBEBE !important;
+        max-height: 100% !important;
+    }
+    div.right > div.right-container {
+        position: absolute;
+        width: 95%;
+        height: 100%;
+        top: 2.5%;
+        -webkit-transform: translate(-50%);
+        -ms-transform: translate(-50%);
+        transform: translate(-50%);
+    }
+}
+i.github {
+    position: absolute;
+    left: 55%;
+    top: 50%;
+    margin-top: -30px;
+    background-image: url("../img/@github.svg");
+    background-repeat: no-repeat;
+    background-size: 60px 60px;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 0 50px 5px #002262;
+    box-shadow: 0 0 50px 5px #002262;
+}
+i.facebook {
+    position: absolute;
+    right: 55%;
+    top: 50%;
+    margin-top: -30px;
+    background-image: url("../img/@facebook.svg");
+    background-repeat: no-repeat;
+    background-size: 60px 60px;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 0 50px 5px #002262;
+    box-shadow: 0 0 50px 5px #002262;
+}
