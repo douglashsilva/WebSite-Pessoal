@@ -1,7 +1,7 @@
 class App {
 
     constructor(){
-        this.cdn = "http://cdn.douglashsilva.com.br"
+        this.cdn = "https://cdn.douglashsilva.com.br"
         this.appendCertificates()
     }
 
