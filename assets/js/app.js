@@ -6,7 +6,8 @@ class App {
     }
 
     async getCertificates(){
-        const certificates = await fetch("assets/data/certificates.json")
+        const response = await fetch("assets/data/certificates.json")
+        const certificates = await response.json()
         return certificates.map((certificate) => {
             return {
                 name: certificate.name,
